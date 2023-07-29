@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(145, 63, 63);
+}
+
+.wrapper{
+    width: 400px;
+    border-radius: 7px;
+    background-color: #99dee9;
+}
+
+.wrapper header{
+    color: rgb(223, 163, 90);
+    padding: 16px 15px;
+    font-size: 21px;
+    font-weight: bold;
+    align-items: center;
+    border-bottom: 1px solid #b5a6ef;
+}
+
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+header i{
+    font-size: 0px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.wrapper .input-part{
+    margin: 20px 25px 30px;
+}
+
+.wrapper.active .input-part{
+    display: none;
+}
+
+.input-part .info-txt{
+    display: none;
+    padding: 15px 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.info-txt.pending{
+    display: block;
+    color: #0fe81ee8;
+    background-color: #a20f0f;
+    border: 1px solid #870b0b;
+}
+
+.info-txt.error{
+    display: block;
+    color: #ab490cd7;
+    background-color: #a5a0b1;
+    border: 1px solid #aaa6bc;
+}
+
+.input-part :where(input,button){
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 55px;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.input-part input{
+    text-align: center;
+    border: 1px solid #64866c;
+}
+
+.input-part input:is(:focus, :valid){
+    border: 2px solid #adaaf2;
+}
+
+.input-part .separator{
+    margin: 25px 0px;
+    height: 1px;
+    width: 100%;
+    background: #7cfab7;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.separator::before{
+    content: "or";
+    font-size: 15px;
+    padding: 0px 15px;
+    background: #fdd8d8;
+    color: #b4abab;
+}
+
+.input-part button{
+    color: #e26060;
+    background-color: cadetblue;
+}
+
+.weather-part{
+    margin: 30px 0 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width: 125px;
+}
+
+.weather-part .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+
+.weather-part .temp .deg{
+    font-size: 40px;
+    display: block;
+    margin: 10px 5px 0 0;
+}
+
+.weather-part .location{
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.location i{
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #a09191;
+    justify-content: space-between;
+}
+
+.bottom-details .column{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    justify-content: center;
+}
+
+.column i.bxs-thermometer{
+    font-size: 40px;
+    color: rgb(141, 11, 102);
+}
+
+.column i.bxs-droplet-half{
+    font-size: 40px;
+    color: rgb(18, 107, 190);
+}
+
+.column.humidity{
+    border-left: 1px solid #816c6c;
+}
+
+.details .num-temp span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    margin: 0 2px 0 1px;
+}
+
+.details p{
+    margin-top: -6px;
+    font-size: 14px;
+}
